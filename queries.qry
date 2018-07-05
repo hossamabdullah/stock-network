@@ -5,7 +5,7 @@ query selectAssetByOwner{
 	description: "Select all assets based on their assets"
 	statement:
   		SELECT org.example.mynetwork.Commodity
-  			WHERE ( owner == _$owner )
+  			WHERE ( owners.trader CONTAINS _$owner)
 }
 
 
