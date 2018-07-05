@@ -1,0 +1,10 @@
+/**
+ * Sample access control list.
+ */
+rule NetworkAdminUser {
+    description: "Grant business network administrators full access to user resources"
+    participant: "**"
+    operation: ALL
+    resource: "**"
+    action: ALLOW
+}
