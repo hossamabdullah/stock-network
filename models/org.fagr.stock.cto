@@ -8,8 +8,9 @@ asset Commodity identified by tradingSymbol {
     o String description
     o Double value
     o String type
-    --> Trader owner
+    --> Owner[] owners
 }
+
 participant Trader identified by traderId {
     o String traderId
     o String firstName
@@ -17,8 +18,21 @@ participant Trader identified by traderId {
     o Double balance
     o String password
 }
+
 transaction Trade {
     --> Commodity[] commodity
+    --> Trader oldOwner
     --> Trader newOwner
+}
+
+transaction TradePortion {
+    --> Commodity commodity
+    --> Trader oldOwner
+    --> Trader newOwner
+    o Double percentage
+}
+
+concept Owner{
+    --> Trader trader
     o Double percentage
 }
