@@ -64,3 +64,8 @@ then start the composer rest server with option -a true
 or with option -m true if you want to enable multi-user mode to sign transactions
 
 ```composer-rest-server -c admin@stock-network -m true```
+
+
+to record all of this, install the following
+
+```sudo apt-get install recordmydesktop gtk-recordmydesktop```
