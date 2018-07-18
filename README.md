@@ -1,5 +1,6 @@
 -1  - 
 Delete old card if exist
+
 ```composer card delete -c admin@stock-network```
 
 0 - 
