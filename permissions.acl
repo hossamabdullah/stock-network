@@ -1,18 +1,10 @@
 /**
- * Access control rules for tutorial-network
+ * Sample access control list.
  */
-rule Default {
-    description: "Allow all participants access to all resources"
-    participant: "ANY"
+rule NetworkAdminUser {
+    description: "Grant business network administrators full access to user resources"
+    participant: "**"
     operation: ALL
-    resource: "org.example.mynetwork.*"
+    resource: "**"
     action: ALLOW
-}
-
-rule SystemACL {
-  description:  "System ACL to permit all access"
-  participant: "ANY"
-  operation: ALL
-  resource: "org.hyperledger.composer.system.**"
-  action: ALLOW
 }

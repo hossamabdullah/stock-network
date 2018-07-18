@@ -1,0 +1,17 @@
+/**
+ * New query file
+ */
+query selectAssetByOwner{
+	description: "Select all assets based on their assets"
+	statement:
+  		SELECT org.example.mynetwork.Commodity
+  			WHERE ( owners.trader CONTAINS _$owner)
+}
+
+
+query selectAssetByType{
+	description: "Select all assets based on their assets"
+	statement:
+  		SELECT org.example.mynetwork.Commodity
+  			WHERE ( type == _$type )
+}
